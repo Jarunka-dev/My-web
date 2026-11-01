@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     SEO / META TAGY
+     ZMĚŇ ZDE: title, description, og:image a og:url na vlastní údaje
+     ============================================================ -->
+<title>Dzarisss — Student</title>
+<meta name="description" content="Creative mind. Digital creator. Game designer. — Dzarisss, Student. Podívejte se na moje projekty a domluvte si spolupráci." />
+<meta name="author" content="Dzarisss" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Dzarisss — Student" />
+<meta property="og:description" content="Creative mind. Digital creator. Game designer." />
+<meta property="og:image" content="{{URL_NA_OG_OBRAZEK}}" />
+<meta property="og:url" content="{{URL_WEBU}}" />
+<meta name="twitter:card" content="summary_larSCge_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111318'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%233D5AFE' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        colors: {
+          bg: '#111318', 'bg-alt': '#15181D', surface: '#1B1F27', border: '#262B35',
+          ink: '#EDEFF2', muted: '#DBF5F8',
+          accent: { DEFAULT: '#42CDF3', hover: '#3D3C3C', soft: '#3D5AFE1F' }
+        },
+        maxWidth: { content: '72rem' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-padding-top: 5rem; }
+  body { -webkit-font-smoothing: antialiased; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #3D5AFE; outline-offset: 3px; border-radius: 4px;
+  }
+  .dot-grid { background-image: radial-gradient(#2A2F3A 1px, transparent 1px); background-size: 26px 26px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  .nav-active { color: #EDEFF2; }
+</style>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+<a href="#hlavni-obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+  Přeskočit na hlavní obsah
+</a>
+
+<!-- ============================================================
+     NAVIGACE — stejná na všech stránkách (index.html, projekty.html,
+     sluzby.html, kontakt.html). ZMĚŇ ZDE: jméno/logo a při kopírování
+     na další stránky uprav třídu "nav-active" u aktuálního odkazu.
+     ============================================================ -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur">
+  <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between" aria-label="Hlavní navigace">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-ink hover:text-accent transition-colors">
+      Dzarisss
+    </a>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="hover:text-ink transition-colors">Služby</a></li>
+      <li>
+        <a href="kontakt.html" class="inline-flex items-center rounded-full bg-accent text-white px-4 py-2 text-sm font-medium hover:bg-accent-hover transition-colors">
+          Kontaktovat
+        </a>
+      </li>
+    </ul>
+
+    <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít navigační menu"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-ink hover:border-accent transition-colors">
+      <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="icon-close" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-bg">
+    <ul class="px-6 py-4 flex flex-col gap-4 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="block py-1 hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="block py-1 hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="block py-1 hover:text-ink transition-colors">Služby</a></li>
+      <li><a href="kontakt.html" class="block py-1 text-accent font-medium hover:text-accent-hover transition-colors">Kontaktovat</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="hlavni-obsah">
+
+  <!-- ============================================================
+       HERO SEKCE
+       ZMĚŇ ZDE: jméno, jednu větu o tom, co děláš, texty tlačítek
+       ============================================================ -->
+  <section class="dot-grid relative pt-40 pb-28 px-6 border-b border-border">
+    <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/95 to-bg pointer-events-none" aria-hidden="true"></div>
+    <div class="relative max-w-content mx-auto">
+      <div class="flex items-center gap-2 mb-6 text-sm text-muted">
+        <span class="w-2 h-2 rounded-full bg-accent" aria-hidden="true"></span>
+        <span>Coming soon...</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-3xl">
+        Dzarisss
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-muted max-w-2xl leading-relaxed">
+        Creative mind. Digital creator. Game designer.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="projekty.html"
+          class="inline-flex items-center justify-center rounded-full bg-accent text-white px-6 py-3 text-sm font-medium hover:bg-accent-hover transition-colors">
+          Zobrazit práci
+        </a>
+        <a href="kontakt.html"
+          class="inline-flex items-center justify-center rounded-full border border-border text-ink px-6 py-3 text-sm font-medium hover:border-accent hover:text-accent transition-colors">
+          Kontaktovat
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       O MNĚ
+       ZMĚŇ ZDE: odstavec o sobě a nahraď placeholder fotku vlastní
+       ============================================================ -->
+  <section id="o-mne" class="py-24 px-6 border-b border-border">
+    <div class="max-w-content mx-auto grid md:grid-cols-[1fr_1.3fr] gap-12 items-center">
+      <div class="order-1 md:order-none">
+        <div role="img" aria-label="Portrét {{JMÉNO}} — zástupný obrázek, nahraďte vlastní fotografií"
+          class="aspect-square w-full max-w-xs mx-auto md:mx-0 rounded-2xl bg-surface border border-border flex items-center justify-center">
+          <span class="text-5xl font-bold text-muted"><img src="logo.png"></span>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-5">O mně</h2>
+        <p class="text-muted leading-relaxed max-w-xl">
+          Dzarisss je osobní kreativní značka propojující 
+          game design, 3D tvorbu, programování, vizuální design 
+          a moderní digitální tvorbu.
+        </p>
+        <ul class="mt-8 grid grid-cols-2 gap-4 max-w-md text-sm">
+          <li class="flex items-center gap-2 text-muted"><span class="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>2+ let praxe</li>
+          <li class="flex items-center gap-2 text-muted"><span class="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>-+ dokončených projektů</li>
+          <li class="flex items-center gap-2 text-muted"><span class="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>BRNO</li>
+          <li class="flex items-center gap-2 text-muted"><span class="w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true"></span>český/anglický jazyk</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VYBRANÉ PROJEKTY (teaser) — ukazuje jen 3 karty, kompletní
+       portfolio je na samostatné stránce projekty.html
+       ZMĚŇ ZDE: názvy a popisy stejně jako na stránce projekty.html
+       ============================================================ -->
+  <section class="py-24 px-6 border-b border-border bg-bg-alt">
+    <div class="max-w-content mx-auto">
+      <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
+        <div class="max-w-xl">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-4">Portfolio</h2>
+          <p class="text-muted leading-relaxed"> Jsem kreativní studentka zaměřená na game design, 3D tvorbu, programování a digitální tvorbu. 
+            Baví mě propojovat technologie s vizuálním designem a vytvářet projekty, které mají vlastní atmosféru, myšlenku a charakter.
+            Ve své tvorbě experimentuji s 3D světy, herním designem, animací, grafikou i programováním.
+            Nechci se omezovat na jeden obor — zajímá mě celý proces od prvního nápadu až po výsledný projekt.
+            
+</p>
+        </div>
+        <a href="projekty.html" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors whitespace-nowrap">
+          Zobrazit všechny projekty
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 1}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5V6.75A2.25 2.25 0 0 1 5.25 4.5h13.5A2.25 2.25 0 0 1 21 6.75v9.75M3 16.5A2.25 2.25 0 0 0 5.25 18.75h13.5A2.25 2.25 0 0 0 21 16.5M3 16.5l4.5-4.5a2 2 0 0 1 2.8 0l1.2 1.2M21 16.5l-5.5-5.5a2 2 0 0 0-2.8 0l-.7.7" /></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2">3D GRAFIKA</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">BLENDER</p>
+           <img src="Obrázek 22.09.2026 v 21.24.png"> 
+           <a href="projekty.html#projekt-1" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">Zobrazit projekt</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 2}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082M9.75 3.104a24.301 24.301 0 0 1 4.5 0M14.25 3.104v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2">SUZUKI MOTORKA</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">Ukázka modelu</p>  
+            <a href="projekty.html#projekt-2" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">Zobrazit projekt</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 3}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" /></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-lg mb-2">ILUSTRATOR</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">Pomáháme značkám růst</p>
+            <img src="logoo.jpg">
+            <a href="projekty.html#projekt-3" class="text-sm font-medium text-accent hover:text-accent-hover transition-colors">Zobrazit projekt</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER — stejný na všech stránkách
+     ZMĚŇ ZDE: rok/jméno pro copyright a odkaz na ochranu údajů
+     ============================================================ -->
+<footer class="px-6 py-10 border-t border-border">
+  <div class="max-w-content mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+    <p>&copy; <span id="year"></span> Dzarisss. Všechna práva vyhrazena.</p>
+    <div class="flex items-center gap-6">
+      <a href="{{ODKAZ_NA_OCHRANU_UDAJU}}" class="hover:text-ink transition-colors">Ochrana osobních údajů</a>
+      <a href="#hlavni-obsah" class="hover:text-ink transition-colors">Nahoru ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

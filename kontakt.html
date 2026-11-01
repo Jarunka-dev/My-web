@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Kontakt — Jarmila Péťová</title>
+<meta name="description" content="Napište Jarmila Péťová — 3D grafička & Game Designer. Domluvte si spolupráci nebo konzultaci." />
+<meta name="author" content="Jarmila Péťová" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Kontakt — Jarmila Petrová" />
+<meta property="og:description" content="Domluvte si spolupráci nebo konzultaci." />
+<meta property="og:image" content="{{URL_NA_OG_OBRAZEK}}" />
+<meta property="og:url" content="{{URL_WEBU}}/kontakt.html" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111318'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%233D5AFE' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        colors: {
+          bg: '#111318', 'bg-alt': '#15181D', surface: '#1B1F27', border: '#262B35',
+          ink: '#EDEFF2', muted: '#DBF5F8',
+          accent: { DEFAULT: '#42CDF3', hover: '#3D3C3C', soft: '#3D5AFE1F' }
+        },
+        maxWidth: { content: '72rem' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-padding-top: 5rem; }
+  body { -webkit-font-smoothing: antialiased; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #070b20; outline-offset: 3px; border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+<a href="#hlavni-obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+  Přeskočit na hlavní obsah
+</a>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur">
+  <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between" aria-label="Hlavní navigace">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-ink hover:text-accent transition-colors">
+      Dzarisss
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="hover:text-ink transition-colors">Služby</a></li>
+      <li>
+        <a href="kontakt.html" class="inline-flex items-center rounded-full bg-accent text-white px-4 py-2 text-sm font-medium hover:bg-accent-hover transition-colors" aria-current="page">
+          Kontaktovat
+        </a>
+      </li>
+    </ul>
+    <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít navigační menu"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-ink hover:border-accent transition-colors">
+      <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="icon-close" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-bg">
+    <ul class="px-6 py-4 flex flex-col gap-4 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="block py-1 hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="block py-1 hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="block py-1 hover:text-ink transition-colors">Služby</a></li>
+      <li><a href="kontakt.html" class="block py-1 text-accent font-medium">Kontaktovat</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="hlavni-obsah">
+
+  <!-- ============================================================
+       KONTAKT
+       ZMĚŇ ZDE: e-mail, sociální sítě, a napojte formulář na skutečnou
+       službu (viz komentář u <form> níže)
+       ============================================================ -->
+  <section class="pt-40 pb-24 px-6">
+    <div class="max-w-content mx-auto grid md:grid-cols-2 gap-14">
+
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-5">Pojďme spolupracovat</h1>
+        <p class="text-muted leading-relaxed max-w-md mb-8">
+          Máte projekt, se kterým bych mohl/a pomoct? Napište mi pár řádků, ozvu se do 2 pracovních dnů.
+        </p>
+
+        <dl class="space-y-4 text-sm">
+          <div class="flex items-center gap-3">
+            <dt class="sr-only">E-mail</dt>
+            <dd><a href="mailto:{{EMAIL}}" class="text-accent hover:text-accent-hover transition-colors">jarinka.gym@gmail.com</a></dd>
+          </div>
+          <div class="flex items-center gap-3">
+            <dt class="sr-only">Telefon</dt>
+            <dd><a href="tel:{{TELEFON}}" class="text-muted hover:text-ink transition-colors">730 689 460</a></dd>
+          </div>
+        </dl>
+
+        <div class="flex items-center gap-4 mt-8">
+          <a href="{{ODKAZ_LINKEDIN}}" aria-label="LinkedIn profil" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors">in</a>
+          <a href="https://github.com/Jarunka-dev" aria-label="GitHub profil" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors">gh</a>
+          <a href="https://www.instagram.com/jaruska_ofc/" aria-label="Instagram profil" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent transition-colors">ig</a>
+        </div>
+
+        <!-- ZMĚŇ ZDE: pokud jsi OSVČ/firma, doplň povinné fakturační údaje -->
+        <div class="mt-10 pt-8 border-t border-border text-sm text-muted space-y-1">
+          <p>Jarmila / Dzarisss</p>
+          <p>IČO: neni</p>
+          <p>BRNO</p>
+        </div>
+      </div>
+
+      <!-- Kontaktní formulář: ZMĚŇ ZDE — tento formulář nemá backend.
+           Nejjednodušší řešení bez psaní serveru: služba Formspree (přidejte
+           action="https://formspree.io/f/VÁŠ_ID" a method="POST"), nebo pokud
+           nasazujete na Netlify, přidejte atribut data-netlify="true" a name="contact". -->
+      <form id="contact-form" class="space-y-4" aria-label="Kontaktní formulář">
+        <div>
+          <label for="name" class="block text-sm text-muted mb-2">Jméno</label>
+          <input id="name" name="name" type="text" required autocomplete="name"
+            class="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm text-ink placeholder:text-muted/60 focus:border-accent transition-colors"
+            placeholder="Vaše jméno" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm text-muted mb-2">E-mail</label>
+          <input id="email" name="email" type="email" required autocomplete="email"
+            class="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm text-ink placeholder:text-muted/60 focus:border-accent transition-colors"
+            placeholder="vas@email.cz" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm text-muted mb-2">Zpráva</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full rounded-xl bg-surface border border-border px-4 py-3 text-sm text-ink placeholder:text-muted/60 focus:border-accent transition-colors resize-none"
+            placeholder="Pár slov o vašem projektu…"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full rounded-xl bg-accent text-white px-6 py-3 text-sm font-medium hover:bg-accent-hover transition-colors">
+          Odeslat zprávu
+        </button>
+        <p id="form-status" class="text-sm text-muted" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="px-6 py-10 border-t border-border">
+  <div class="max-w-content mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+    <p>&copy; <span id="year"></span> Dzarisss. Všechna práva vyhrazena.</p>
+    <div class="flex items-center gap-6">
+      <a href="{{ODKAZ_NA_OCHRANU_UDAJU}}" class="hover:text-ink transition-colors">Ochrana osobních údajů</a>
+      <a href="#hlavni-obsah" class="hover:text-ink transition-colors">Nahoru ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ZMĚŇ ZDE: nahraďte tuto ukázkovou logiku skutečným odesláním
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formStatus.textContent = 'Děkuji za zprávu! Ozvu se co nejdříve. (Ukázkové chování — napojte formulář na e-mailovou službu.)';
+    contactForm.reset();
+  });
+</script>
+
+</body>
+</html>

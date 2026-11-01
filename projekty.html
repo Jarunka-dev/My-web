@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Portfolio — Dzarisss</title>
+<meta name="description" content="Portfolio projektů Jarmila Petrová — 3D grafička & Game Designer. Přehled případových studií a technologií." />
+<meta name="author" content="Jarmila Petrová" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Projekty — Jarmila Petrová" />
+<meta property="og:description" content="Přehled projektů a případových studií." />
+<meta property="og:image" content="{{URL_NA_OG_OBRAZEK}}" />
+<meta property="og:url" content="{{URL_WEBU}}/projekty.html" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111318'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%233D5AFE' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        colors: {
+          bg: '#111318', 'bg-alt': '#15181D', surface: '#1B1F27', border: '#262B35',
+          ink: '#EDEFF2', muted: '#DBF5F8',
+          accent: { DEFAULT: '#42CDF3', hover: '#3D3C3C', soft: '#3D5AFE1F' }
+        },
+        maxWidth: { content: '72rem' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-padding-top: 5rem; }
+  body { -webkit-font-smoothing: antialiased; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #3D5AFE; outline-offset: 3px; border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  .modal-enter { animation: modalIn .18s ease-out; }
+  @keyframes modalIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+<a href="#hlavni-obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+  Přeskočit na hlavní obsah
+</a>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur">
+  <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between" aria-label="Hlavní navigace">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-ink hover:text-accent transition-colors">
+      Dzarisss
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="text-ink" aria-current="page">Portfolio</a></li>
+      <li><a href="sluzby.html" class="hover:text-ink transition-colors">Služby</a></li>
+      <li>
+        <a href="kontakt.html" class="inline-flex items-center rounded-full bg-accent text-white px-4 py-2 text-sm font-medium hover:bg-accent-hover transition-colors">
+          Kontaktovat
+        </a>
+      </li>
+    </ul>
+    <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít navigační menu"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-ink hover:border-accent transition-colors">
+      <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="icon-close" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-bg">
+    <ul class="px-6 py-4 flex flex-col gap-4 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="block py-1 hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="block py-1 text-ink">Portfolio</a></li>
+      <li><a href="sluzby.html" class="block py-1 hover:text-ink transition-colors">Služby</a></li>
+      <li><a href="kontakt.html" class="block py-1 text-accent font-medium hover:text-accent-hover transition-colors">Kontaktovat</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="hlavni-obsah">
+
+  <!-- ============================================================
+       HLAVIČKA STRÁNKY
+       ZMĚŇ ZDE: úvodní text nad seznamem projektů
+       ============================================================ -->
+  <section class="pt-40 pb-16 px-6 border-b border-border">
+    <div class="max-w-content mx-auto max-w-2xl">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Portfolio</h1>
+      <p class="text-muted leading-relaxed">
+        Tohle portfolio je prostor, kde ukazuji, co tvořím, co se učím a kam se posouvám.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO / PROJEKTY — plný přehled
+       ZMĚŇ ZDE: názvy, popisy, technologie a odkazy jednotlivých projektů.
+       Karty otevírají modální okno s případovou studií (viz JS na konci
+       souboru, objekt caseStudies) — přidejte další položky do pole
+       podle stejného vzoru a do gridu přidejte další <article>.
+       ============================================================ -->
+  <section class="py-16 px-6">
+    <div class="max-w-content mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Reálný projekt: nahraď dalších 5 karet stejným vzorem (img + h2 + p + tagy + tlačítko) -->
+        <article id="projekt-1" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video overflow-hidden bg-surface">
+            <img src="projekt-1-cover.jpg" alt="Cinematický render sci-fi interiéru ze scény Půda, pokusy a laboratoř" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">Půda, pokusy a laboratoř</h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">Cinematický 3D interiér — sci-fi chodby a laboratoř vymodelované a nasvícené v Blenderu.</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Blender</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Cycles</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">3D prostředí</span>
+            </div>
+            <button type="button" data-project="1" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+        <article id="projekt-2" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 2}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082M9.75 3.104a24.301 24.301 0 0 1 4.5 0M14.25 3.104v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
+          </div>
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">2D HRA</h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">V progressu, takze zatim neznámá</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Unity</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Photoshop</span>
+            </div>
+            <button type="button" data-project="2" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+        <article id="projekt-3" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 3}} — zástupný obrázek">
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">LOGO MonoAgnecy </h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">JEDNA VĚTA — jaký problém projekt řeší</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Ilustrator</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Sketch</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Photoshop</span>
+            </div>
+            <button type="button" data-project="3" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+        <article id="projekt-4" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video overflow-hidden bg-surface">
+            <img src="projekt-4-cover.jpg" alt="Plakát, dvojlist a katalog výstavy Črty, škrty, vzpomínky — Petr Zatloukal a přátelé" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300" loading="lazy" />
+          </div>
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">MOU KATALOG pro pana ZATLOUKALA</h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">V progresu</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Ilustrator</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Tiskoviny</span>
+            </div>
+            <button type="button" data-project="4" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+        <article id="projekt-5" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 5}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" /></svg>
+          </div>
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">DARADOX</h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">progress 2028???</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Unreal Engine</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Photoshop</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Figma</span>
+            </div>
+            <button type="button" data-project="5" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+        <article id="projekt-6" class="group rounded-2xl border border-border bg-surface overflow-hidden shadow-lg shadow-black/20 hover:border-accent/60 transition-colors scroll-mt-24">
+          <div class="aspect-video bg-gradient-to-br from-accent/25 via-surface to-bg flex items-center justify-center" role="img" aria-label="Náhled projektu {{NÁZEV PROJEKTU 6}} — zástupný obrázek">
+            <svg class="w-10 h-10 text-accent/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
+          </div>
+          <div class="p-6">
+            <h2 class="font-semibold text-lg mb-2">Characters design</h2>
+            <p class="text-sm text-muted leading-relaxed mb-4">Anatomy body, style</p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">Photoshop</span>
+              <span class="text-xs rounded-full border border-border px-3 py-1 text-muted">papersketch</span>
+            </div>
+            <button type="button" data-project="6" class="js-open-case text-sm font-medium text-accent hover:text-accent-hover transition-colors">
+              Zobrazit 
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA na konec stránky
+       ============================================================ -->
+  <section class="py-20 px-6 border-t border-border bg-bg-alt text-center">
+    <p class="text-muted mb-5">VÝZVA K AKCI — např. Máte podobný projekt v hlavě?</p>
+    <a href="kontakt.html" class="inline-flex items-center justify-center rounded-full bg-accent text-white px-6 py-3 text-sm font-medium hover:bg-accent-hover transition-colors">
+      Domluvit spolupráci
+    </a>
+  </section>
+
+</main>
+
+<footer class="px-6 py-10 border-t border-border">
+  <div class="max-w-content mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+    <p>&copy; <span id="year"></span> Dzarisss. Všechna práva vyhrazena.</p>
+    <div class="flex items-center gap-6">
+      <a href="{{ODKAZ_NA_OCHRANU_UDAJU}}" class="hover:text-ink transition-colors">Ochrana osobních údajů</a>
+      <a href="#hlavni-obsah" class="hover:text-ink transition-colors">Nahoru ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MODÁLNÍ OKNO — PŘÍPADOVÁ STUDIE
+     Obsah se plní dynamicky pomocí JS a objektu "caseStudies" níže.
+     ============================================================ -->
+<div id="case-modal" class="hidden fixed inset-0 z-[60] items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="case-modal-title">
+  <div id="case-modal-backdrop" class="absolute inset-0 bg-black/70"></div>
+  <div class="modal-enter relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-border bg-surface p-8">
+    <button id="case-modal-close" type="button" aria-label="Zavřít případovou studii"
+      class="absolute top-5 right-5 w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted hover:text-ink hover:border-accent transition-colors">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+    </button>
+    <p id="case-modal-tag" class="text-sm text-accent font-medium mb-2"></p>
+    <h3 id="case-modal-title" class="text-2xl font-bold tracking-tight mb-6"></h3>
+
+    <!-- Galerie obrázků — vyplní se jen u projektů, které mají pole "images" -->
+    <div id="case-modal-gallery" class="hidden grid grid-cols-2 gap-2 mb-6"></div>
+
+    <!-- Video ukázka — vyplní se jen u projektů, které mají pole "video" -->
+    <video id="case-modal-video" class="hidden w-full rounded-xl mb-6" controls preload="metadata"></video>
+
+    <!-- PDF ke zobrazení — vyplní se jen u projektů, které mají pole "pdfs" -->
+    <div id="case-modal-pdfs" class="hidden flex-wrap gap-2 mb-6"></div>
+
+    <div class="space-y-5 text-sm">
+      <div>
+        <h4 class="font-semibold mb-1">Problém</h4>
+        <p id="case-modal-problem" class="text-muted leading-relaxed"></p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">Řešení</h4>
+        <p id="case-modal-solution" class="text-muted leading-relaxed"></p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">Výsledek</h4>
+        <p id="case-modal-result" class="text-muted leading-relaxed"></p>
+      </div>
+      <div id="case-modal-tech" class="flex flex-wrap gap-2 pt-2"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ZMĚŇ ZDE: doplňte reálný obsah pro každý projekt. Klíč odpovídá
+  // hodnotě data-project="" u tlačítka "Zobrazit případovou studii".
+  const caseStudies = {
+    1: { tag: 'Blender · Cycles', title: 'Půda, pokusy a laboratoř',
+      problem: 'Největší výzvou bylo vytvořit prostředí, které nebude působit pouze jako jednoduchý 3D model, ale jako skutečný prostor s vlastní atmosférou. Bylo potřeba vyřešit také práci s osvětlením, materiály a kompozicí tak, aby jednotlivé části scény působily propojeně.',
+      solution: 'Celý interiér jsem vytvořila v Blenderu. Pomocí modelování jsem vytvořila jednotlivé části chodeb a laboratoře a následně jsem pracovala s materiály, světly a kamerou.Pro dosažení sci-fi atmosféry jsem využila kontrastní osvětlení, výrazné světelné prvky a detaily v prostředí. Kompozici jsem přizpůsobila tak, aby kamera vedla pozornost prostorem a zároveň zvýraznila jeho hloubku.',
+      result: 'Výsledkem je cinematický 3D interiér, který kombinuje futuristický design, atmosférické osvětlení a detailní prostředí. Projekt mi umožnil rozvíjet především 3D modeling, lighting, composition, materials a cinematic storytelling v Blenderu.',
+      tech: ['Blender', 'Cycles', '3D modelování', 'Lighting'],
+      images: ['projekt-1-img-2.jpg', 'projekt-1-img-3.jpg'],
+      video: 'projekt-1-demo.mp4' },
+    2: { tag: 'Unity · Photoshop', title: 'Bez nazvu prozatim',
+      problem: 'žádné', solution: 'žádné', result: 'žádné',
+      tech: ['vysledek', 'práce'] },
+    3: { tag: 'Figma · Photoshop', title: 'Značka pro marketing',
+      problem: 'Cílem projektu bylo vytvořit vizuální identitu pro MonoAgency, která bude působit moderně, profesionálně a zároveň bude snadno zapamatovatelná. Bylo potřeba najít jednoduchý vizuální koncept, který bude fungovat napříč různými formáty a materiály.', solution: 'Řešení jsem postavila na minimalistickém vizuálním stylu a jednoduchých grafických prvcích. Důraz jsem kladla především na čitelnost, jednotnost a snadnou použitelnost identity v digitálním i tištěném prostředí.', result: 'Výsledkem je ucelený vizuální koncept MonoAgency, který propojuje jednoduchost, moderní vzhled a konzistentní vizuální komunikaci. Návrh je připravený tak, aby mohl být dále využíván na různých komunikačních materiálech a digitálních platformách.',
+      tech: ['Figma', 'Ilustrator', 'Photoshop'],
+      video: 'projekt-3-demo.mp4' },
+      4: { tag: 'Ilustrator · Tiskoviny', title: 'KATALOG UMĚLCŮ',
+      problem: 'V procesu', solution: 'Koná se to 3.11. v 18:00 do 21.11 2026', result: 'Vytvořelo se něco na co jsem pyšná',
+      tech: ['Ilustrator', 'Tiskoviny'],
+      images: ['projekt-4-img-2.jpg', 'projekt-4-img-3.jpg', 'projekt-4-img-4.jpg', 'projekt-4-img-5.jpg'],
+      pdfs: [
+        // { title: 'Katalog', file: 'projekt-4-katalog.pdf' },  // odkomentuj, až nahraješ zmenšený katalog
+        { title: 'Dvojlist', file: 'projekt-4-dvojlist.pdf' },
+        { title: 'Plakát', file: 'projekt-4-plakat.pdf' },
+        { title: 'Katalog', file: 'katalog MUO.pdf' }
+      ] },
+    5: { tag: 'Roblox studio · Unreal Engine', title: 'DARADOX',
+      problem: 'Dost často se to sekne a celková práce s časem, je u mě nejhorší', solution: 'Hodně dobře si plánovat v deníku co všechno chci splnit udělat atd...', result: '{{Výsledek}}',
+      tech: ['Roblox', 'Figma', '...'] },
+    6: { tag: 'Photoshop · Sketchbook', title: 'Charakter design',
+      problem: 'žádné', solution: 'žádné', result: 'žádné',
+      tech: ['žádné', 'žádné'] }
+  };
+
+  const caseModal = document.getElementById('case-modal');
+  const caseModalBackdrop = document.getElementById('case-modal-backdrop');
+  const caseModalClose = document.getElementById('case-modal-close');
+  let lastFocusedElement = null;
+
+  function openCaseModal(id) {
+    const data = caseStudies[id];
+    if (!data) return;
+    document.getElementById('case-modal-tag').textContent = data.tag;
+    document.getElementById('case-modal-title').textContent = data.title;
+    document.getElementById('case-modal-problem').textContent = data.problem;
+    document.getElementById('case-modal-solution').textContent = data.solution;
+    document.getElementById('case-modal-result').textContent = data.result;
+
+    // Galerie obrázků (volitelná — jen pokud projekt pole "images" má)
+    const gallery = document.getElementById('case-modal-gallery');
+    gallery.innerHTML = '';
+    if (data.images && data.images.length) {
+      data.images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = data.title + ' — ukázka z projektu';
+        img.loading = 'lazy';
+        img.className = 'w-full aspect-video object-cover rounded-lg border border-border';
+        gallery.appendChild(img);
+      });
+      gallery.classList.remove('hidden');
+      gallery.classList.add('grid');
+    } else {
+      gallery.classList.add('hidden');
+      gallery.classList.remove('grid');
+    }
+
+    // Video ukázka (volitelná — jen pokud projekt pole "video" má)
+    const videoEl = document.getElementById('case-modal-video');
+    if (data.video) {
+      videoEl.src = data.video;
+      videoEl.classList.remove('hidden');
+    } else {
+      videoEl.pause();
+      videoEl.removeAttribute('src');
+      videoEl.load();
+      videoEl.classList.add('hidden');
+    }
+
+    // PDF ke zobrazení (volitelné — jen pokud projekt pole "pdfs" má)
+    const pdfWrap = document.getElementById('case-modal-pdfs');
+    pdfWrap.innerHTML = '';
+    if (data.pdfs && data.pdfs.length) {
+      data.pdfs.forEach(item => {
+        const a = document.createElement('a');
+        a.href = item.file;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-accent hover:text-accent-hover hover:border-accent transition-colors';
+        a.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>';
+        a.appendChild(document.createTextNode(item.title + ' (PDF)'));
+        pdfWrap.appendChild(a);
+      });
+      pdfWrap.classList.remove('hidden');
+      pdfWrap.classList.add('flex');
+    } else {
+      pdfWrap.classList.add('hidden');
+      pdfWrap.classList.remove('flex');
+    }
+
+    const techWrap = document.getElementById('case-modal-tech');
+    techWrap.innerHTML = '';
+    data.tech.forEach(t => {
+      const span = document.createElement('span');
+      span.className = 'text-xs rounded-full border border-border px-3 py-1 text-muted';
+      span.textContent = t;
+      techWrap.appendChild(span);
+    });
+    lastFocusedElement = document.activeElement;
+    caseModal.classList.remove('hidden');
+    caseModal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    caseModalClose.focus();
+  }
+
+  function closeCaseModal() {
+    caseModal.classList.add('hidden');
+    caseModal.classList.remove('flex');
+    document.body.style.overflow = '';
+    const videoEl = document.getElementById('case-modal-video');
+    videoEl.pause();
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  document.querySelectorAll('.js-open-case').forEach(btn => {
+    btn.addEventListener('click', () => openCaseModal(btn.dataset.project));
+  });
+  caseModalClose.addEventListener('click', closeCaseModal);
+  caseModalBackdrop.addEventListener('click', closeCaseModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !caseModal.classList.contains('hidden')) closeCaseModal();
+  });
+
+  // Otevřít modal automaticky, pokud stránka byla otevřena s kotvou #projekt-N
+  // (odkaz z teaseru na homepage jen naskoluje ke kartě, toto je volitelné
+  // rozšíření — pokud chcete, aby se modal otevřel rovnou, odkomentujte:)
+  // const hashId = window.location.hash.replace('#projekt-', '');
+  // if (hashId && caseStudies[hashId]) openCaseModal(hashId);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Služby — Dzarisss</title>
+<meta name="description" content="Služby, které nabízí Dzarisss — 3D grafička & Game Designer." />
+<meta name="author" content="Dzarisss" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Služby — Dzarisss" />
+<meta property="og:description" content="Přehled nabízených služeb a spolupráce." />
+<meta property="og:image" content="{{URL_NA_OG_OBRAZEK}}" />
+<meta property="og:url" content="{{URL_WEBU}}/sluzby.html" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111318'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='30' font-weight='700' fill='%233D5AFE' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        colors: {
+          bg: '#111318', 'bg-alt': '#15181D', surface: '#1B1F27', border: '#262B35',
+          ink: '#EDEFF2', muted: '#DBF5F8',
+          accent: { DEFAULT: '#42CDF3', hover: '#3D3C3C', soft: '#3D5AFE1F' }
+        },
+        maxWidth: { content: '72rem' }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-padding-top: 5rem; }
+  body { -webkit-font-smoothing: antialiased; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #3D5AFE; outline-offset: 3px; border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+
+<body class="bg-bg text-ink font-sans antialiased">
+
+<a href="#hlavni-obsah" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-accent focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+  Přeskočit na hlavní obsah
+</a>
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-border/80 bg-bg/80 backdrop-blur">
+  <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between" aria-label="Hlavní navigace">
+    <a href="index.html" class="text-lg font-semibold tracking-tight text-ink hover:text-accent transition-colors">
+      Dzarisss
+    </a>
+    <ul class="hidden md:flex items-center gap-8 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="text-ink" aria-current="page">Služby</a></li>
+      <li>
+        <a href="kontakt.html" class="inline-flex items-center rounded-full bg-accent text-white px-4 py-2 text-sm font-medium hover:bg-accent-hover transition-colors">
+          Kontaktovat
+        </a>
+      </li>
+    </ul>
+    <button id="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Otevřít navigační menu"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border text-ink hover:border-accent transition-colors">
+      <svg id="icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+      </svg>
+      <svg id="icon-close" class="hidden w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-bg">
+    <ul class="px-6 py-4 flex flex-col gap-4 text-sm text-muted">
+      <li><a href="index.html#o-mne" class="block py-1 hover:text-ink transition-colors">O mně</a></li>
+      <li><a href="projekty.html" class="block py-1 hover:text-ink transition-colors">Portfolio</a></li>
+      <li><a href="sluzby.html" class="block py-1 text-ink">Služby</a></li>
+      <li><a href="kontakt.html" class="block py-1 text-accent font-medium hover:text-accent-hover transition-colors">Kontaktovat</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="hlavni-obsah">
+
+  <!-- ============================================================
+       HLAVIČKA STRÁNKY
+       ============================================================ -->
+  <section class="pt-40 pb-16 px-6 border-b border-border">
+    <div class="max-w-content mx-auto max-w-2xl">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Služby</h1>
+      <p class="text-muted leading-relaxed">Pomáhám jednotlivcům, tvůrcům a herním studiím realizovat jejich digitální projekty. Specializuji se na herní design, tvorbu 3D postav, vývoj her a programování. Kombinuji kreativitu s technickými znalostmi a vytvářím řešení na míru.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLUŽBY — jednotlivé karty
+       ZMĚŇ ZDE: názvy, popisy a případně přidej/uber kartu (kopíruj blok <div>)
+       ============================================================ -->
+  <section class="py-16 px-6 border-b border-border">
+    <div class="max-w-content mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-2xl border border-border bg-surface p-7">
+          <h2 class="font-semibold text-lg mb-3">Game Design & Development</h2>
+          <p class="text-sm text-muted leading-relaxed mb-4">Navrhuji a vytvářím herní projekty od prvotního konceptu až po funkční herní zážitek.</p>
+          <ul class="text-sm text-muted space-y-2">
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Game Design & Level Design</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Game Development</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Gameplay Mechanics</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>World Building</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-border bg-surface p-7">
+          <h2 class="font-semibold text-lg mb-3">Character & 3D Design</h2>
+          <p class="text-sm text-muted leading-relaxed mb-4">Vytvářím originální herní postavy, 3D modely a vizuální prvky pro digitální projekty.</p>
+          <ul class="text-sm text-muted space-y-2">
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Character Design</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>3D Modeling</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Environment Design</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Game Assets Creation</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-border bg-surface p-7">
+          <h2 class="font-semibold text-lg mb-3">Programming & Web Development</h2>
+          <p class="text-sm text-muted leading-relaxed mb-4">Věnuji se programování, vývoji interaktivních systémů a tvorbě moderních webových řešení.</p>
+          <ul class="text-sm text-muted space-y-2">
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Game Programming & Scripting</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>UI/UX Design</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Website Development</li>
+            <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent mt-2" aria-hidden="true"></span>Interactive Features</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCES SPOLUPRÁCE (volitelné) — smaž, pokud nechceš
+       ZMĚŇ ZDE: kroky spolupráce
+       ============================================================ -->
+  <section class="py-16 px-6 border-b border-border bg-bg-alt">
+    <div class="max-w-content mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-10">Jak spolupráce probíhá</h2>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div>
+          <p class="text-sm text-accent font-medium mb-2">1. Konzultace</p>
+          <p class="text-sm text-muted leading-relaxed">Probereme tvůj nápad, představu a požadavky na projekt. Společně stanovíme cíle, rozsah práce, potřebné technologie a cenovou nabídku.</p>
+        </div>
+        <div>
+          <p class="text-sm text-accent font-medium mb-2">2. Realizace</p>
+          <p class="text-sm text-muted leading-relaxed">Pustím se do samotné tvorby projektu. Od návrhu designu a 3D modelů až po programování a vývoj. Během práce tě budu průběžně informovat o postupu a konzultovat důležité detaily.</p>
+        </div>
+        <div>
+          <p class="text-sm text-accent font-medium mb-2">3. Předání</p>
+          <p class="text-sm text-muted leading-relaxed">Hotový projekt ti předám v dohodnuté podobě. Společně zkontrolujeme finální výsledek, případně doladíme poslední detaily a zajistím potřebné podklady pro další používání projektu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA na konec stránky
+       ============================================================ -->
+  <section class="py-20 px-6 text-center">
+    <p class="text-muted mb-5">VÝZVA K AKCI — např. Máte v hlavě projekt? Pojďme si o něm promluvit.</p>
+    <a href="kontakt.html" class="inline-flex items-center justify-center rounded-full bg-accent text-white px-6 py-3 text-sm font-medium hover:bg-accent-hover transition-colors">
+      Domluvit spolupráci
+    </a>
+  </section>
+
+</main>
+
+<footer class="px-6 py-10 border-t border-border">
+  <div class="max-w-content mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+    <p>&copy; <span id="year"></span> Dzarisss. Všechna práva vyhrazena.</p>
+    <div class="flex items-center gap-6">
+      <a href="{{ODKAZ_NA_OCHRANU_UDAJU}}" class="hover:text-ink transition-colors">Ochrana osobních údajů</a>
+      <a href="#hlavni-obsah" class="hover:text-ink transition-colors">Nahoru ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
